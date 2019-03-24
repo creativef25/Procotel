@@ -199,9 +199,18 @@
           <div class="dropdown-content dis-none p-t-15 p-b-23">
             <form action="{{ route('getCheckout')}}" method="post">
               {{ csrf_field() }}
-              <button type="submit" class="flex-c-m size2 bo-rad-23 hov1 m-text3 trans-0-4" name="button" style="background-color: #0070ba;">Pagar con PayPal</button>
-
+              <button type="submit" class="flex-c-m size2 bo-rad-23 hov1 m-text3 trans-0-4" name="button" style="background-color: #0070ba;">Pagar</button>
             </form>
+          </div>
+        </div>
+        <div class="wrap-dropdown-content bo7 p-t-15 p-b-14">
+          <h4 class="js-toggle-dropdown-content flex-sb-m cs-pointer m-text19 color0-hov trans-0-4 show-dropdown-content">
+            Pedidos
+            <i class="down-mark fs-12 color1 fa fa-minus dis-none" aria-hidden="true"></i>
+            <i class="up-mark fs-12 color1 fa fa-plus" aria-hidden="true"></i>
+          </h4>
+          <div class="dropdown-content dis-none p-t-15 p-b-23">
+            <a href="{{ route('pedido')}}">Ver pedidos</a>
 
           </div>
 

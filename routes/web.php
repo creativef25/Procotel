@@ -54,4 +54,5 @@ Route::group(['middleware' => ['auth', 'admin:user']], function(){
   Route::post('/getCheckout', 'CarritoController@getCheckout')->name('getCheckout');
   Route::get('/getDone', 'CarritoController@getDone')->name('getDone');
   Route::get('/getCancel', 'CarritoController@getCancel')->name('getCancel');
+  Route::get('/pedidos', 'CarritoController@pedido')->name('pedido');
 });

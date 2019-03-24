@@ -286,6 +286,10 @@ class CarritoController extends Controller
 
     }
 
+    public function pedido(){
+      return view('carrito.pedidos');
+    }
+
 
 
     private function total(){

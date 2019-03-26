@@ -14,7 +14,8 @@ class Pedido extends Model
       return $this->belongsTo('App\User', 'id', 'id_usuario');
     }
 
-    public function produDet(){
-      return $this->hasMany('App\Detalle_Producto');
+    public function producto(){
+      return $this->belongsToMany('App\Producto', 'detalle__productos', 'id_pedido', 'id_producto')
+                  ->withPivot('cantidad', 'total');
     }
 }

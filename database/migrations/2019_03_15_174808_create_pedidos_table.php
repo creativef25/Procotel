@@ -18,6 +18,7 @@ class CreatePedidosTable extends Migration
             $table->integer('id_usuario');
             $table->string('status')->nullable();
             $table->integer('total')->nullable();
+            $table->boolean('entrega')->nullable();
             $table->timestamps();
         });
     }

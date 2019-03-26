@@ -26,7 +26,7 @@ class Producto extends Model
       return $this->hasMany('App\Imagen', 'id_producto', 'id');
     }
 
-    public function DetProd(){
-      return $this->belongsToMany('App\Detalle_Producto');
+    public function pedido(){
+      return $this->belongsToMany('App\Pedido', 'detalle__productos', 'id_producto', 'id_pedido');
     }
 }

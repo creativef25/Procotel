@@ -291,11 +291,7 @@ class CarritoController extends Controller
       $usuario = Auth::user()->id;
       $datos = Datos::where('id', $usuario)->first();
       $pedido = Pedido::where('id_usuario', $datos->id)->get();
-
-      foreach ($pedido as $pedidos) {
-        $detProdu = Detalle_Producto::where('id_pedido', $pedidos->id)->get();
-        return view('carrito.pedidos', compact('detProdu', 'pedido'));
-      }
+      return view('carrito.pedidos', compact('pedido'));
     }
 
 

@@ -8,5 +8,5 @@ class Detalle_Producto extends Model
 {
     protected $table = 'detalle__productos';
 
-    protected $fillable = ['id_pedido', 'id_producto', 'cantidad', 'total'];
+    protected $fillable = ['id_pedido', 'id_producto', 'cantidad', 'total', 'entrega'];
 }

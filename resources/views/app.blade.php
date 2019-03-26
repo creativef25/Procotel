@@ -32,7 +32,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{{ route('datos.index')}}">
               <i class="material-icons">face</i>
               <p>DATOS</p>
             </a>

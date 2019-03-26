@@ -4,13 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Marca;
+use App\Pedido;
 use App\Producto;
 use App\Categoria;
 
 class PrincipalController extends Controller
 {
     public function index(){
-      return view('app');
+
+      $pedidos = Pedido::whereNull('entrega')->get();
+      //dd($pedidos);
+
+      return view('admin.pedEntregar', compact('pedidos'));
     }
 
     public function principal(){
@@ -37,5 +42,16 @@ class PrincipalController extends Controller
       $cate = Categoria::all();
       $produ = Producto::where('id_marca', $id)->get();
       return view('carrito.marcaProducto', compact('cate', 'produ'));
+    }
+
+    public function detallePedido($id){
+      $pedido = Pedido::where('id', $id)->get();
+      return view('admin.detaPedido', compact('pedido'));
+    }
+
+    public function entregado($id){
+      $pedido = Pedido::where('id',$id)->update([
+        "entrega" => 1
+      ]);
     }
 }

@@ -24,6 +24,9 @@ Route::group(['middleware' => ['auth', 'admin:admin']], function(){
   Route::resource('usuarios', 'UsuariosController');
   Route::resource('imagen', 'ImagenController');
   Route::resource('producto', 'ProductoController');
+  Route::resource('datos', 'DatoController');
+  Route::get('detalle/pedido/{id}', 'PrincipalController@detallePedido')->name('DetallePed');
+  Route::get('entrega/{id}', 'PrincipalController@entregado')->name('entrega');
 
 });
 

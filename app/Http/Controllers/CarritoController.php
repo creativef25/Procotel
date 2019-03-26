@@ -289,7 +289,7 @@ class CarritoController extends Controller
     public function pedido(){
 
       $usuario = Auth::user()->id;
-      $datos = Datos::where('id', $usuario)->first();
+      $datos = Datos::where('id_usuario', $usuario)->first();
       $pedido = Pedido::where('id_usuario', $datos->id)->get();
       return view('carrito.pedidos', compact('pedido'));
     }

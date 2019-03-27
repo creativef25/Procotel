@@ -27,6 +27,7 @@ Route::group(['middleware' => ['auth', 'admin:admin']], function(){
   Route::resource('datos', 'DatoController');
   Route::get('detalle/pedido/{id}', 'PrincipalController@detallePedido')->name('DetallePed');
   Route::get('entrega/{id}', 'PrincipalController@entregado')->name('entrega');
+  Route::get('/pedido', 'PrincipalController@pedidosA')->name('pedidosA');
 
 });
 
@@ -40,6 +41,10 @@ Route::get('', 'PrincipalController@principal')->name('procotel');
 Route::get('detalle/producto/{id}', 'PrincipalController@detalleProducto')->name('detalleProd');
 Route::get('gama/{id}', 'PrincipalController@gamaProducto')->name('gamaP');
 Route::get('marca/{id}', 'PrincipalController@marcaProducto')->name('marcaP');
+Route::get('/contacto', 'PrincipalController@contacto')->name('contacto');
+Route::get('/nosotros', 'PrincipalController@nosotros')->name('nosotros');
+Route::get('/tienda', 'PrincipalController@tienda')->name('tienda');
+Route::get('/precios', 'PrincipalController@precios')->name('precios');
 
 Route::bind('producto', function($id){
   return App\Producto::where('id', $id)->first();

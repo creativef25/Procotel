@@ -10,31 +10,23 @@
     <nav class="menu">
       <ul class="main_menu">
         <li>
-          <a href="{{ route('procotel') }}">Home</a>
+          <a href="{{ route('procotel') }}">Inicio</a>
         </li>
 
         <li>
-          <a href="product.html">Shop</a>
-        </li>
-
-        <li class="sale-noti">
-          <a href="product.html">Sale</a>
+          <a href="{{ route('tienda')}}">Tienda</a>
         </li>
 
         <li>
-          <a href="cart.html">Features</a>
+          <a href="{{ route('precios')}}">Renovacion de Planes</a>
         </li>
 
         <li>
-          <a href="blog.html">Blog</a>
+          <a href="{{ route('nosotros')}}">Nosotros</a>
         </li>
 
         <li>
-          <a href="about.html">About</a>
-        </li>
-
-        <li>
-          <a href="contact.html">Contact</a>
+          <a href="{{ route('contacto')}}">Contacto</a>
         </li>
       </ul>
     </nav>
@@ -215,31 +207,23 @@
         <nav class="menu">
           <ul class="main_menu">
             <li>
-              <a href="{{ route('procotel') }}">Home</a>
+              <a href="{{ route('procotel') }}">Inicio</a>
             </li>
 
             <li>
-              <a href="product.html">Shop</a>
-            </li>
-
-            <li class="sale-noti">
-              <a href="product.html">Sale</a>
+              <a href="{{ route('tienda')}}">Tienda</a>
             </li>
 
             <li>
-              <a href="cart.html">Features</a>
+              <a href="{{ route('precios')}}">Renovacion de Planes</a>
             </li>
 
             <li>
-              <a href="blog.html">Blog</a>
+              <a href="{{ route('nosotros')}}">Nosotros</a>
             </li>
 
             <li>
-              <a href="about.html">About</a>
-            </li>
-
-            <li>
-              <a href="contact.html">Contact</a>
+              <a href="{{ route('contacto')}}">Contacto</a>
             </li>
           </ul>
         </nav>
@@ -355,31 +339,23 @@
         </li>
 
         <li class="item-menu-mobile">
-          <a href="{{ route('procotel') }}">Home</a>
+          <a href="{{ route('procotel') }}">Inicio</a>
         </li>
 
         <li class="item-menu-mobile">
-          <a href="product.html">Shop</a>
+          <a href="{{ route('tienda')}}">Tienda</a>
         </li>
 
         <li class="item-menu-mobile">
-          <a href="product.html">Sale</a>
+          <a href="{{ route('precios')}}">Renovacion de Planes</a>
         </li>
 
         <li class="item-menu-mobile">
-          <a href="cart.html">Features</a>
+          <a href="{{ route('nosotros')}}">Nosotros</a>
         </li>
 
         <li class="item-menu-mobile">
-          <a href="blog.html">Blog</a>
-        </li>
-
-        <li class="item-menu-mobile">
-          <a href="about.html">About</a>
-        </li>
-
-        <li class="item-menu-mobile">
-          <a href="contact.html">Contact</a>
+          <a href="{{ route('contacto')}}">Contacto</a>
         </li>
       </ul>
     </nav>

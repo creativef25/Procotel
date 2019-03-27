@@ -54,4 +54,27 @@ class PrincipalController extends Controller
         "entrega" => 1
       ]);
     }
+
+    public function pedidosA(){
+      $pedi = Pedido::all();
+      return view('admin.pedidos', compact('pedi'));
+    }
+
+    public function contacto(){
+      return view('carrito.contacto');
+    }
+
+    public function nosotros(){
+      return view('carrito.nosotros');
+    }
+
+    public function tienda(){
+      $cate = Categoria::all();
+      $produ = Producto::all();
+      return view('carrito.tienda', compact('cate', 'produ'));
+    }
+
+    public function precios(){
+      return view('carrito.precios');
+    }
 }

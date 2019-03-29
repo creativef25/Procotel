@@ -4,62 +4,32 @@
 	<section class="slide1">
 		<div class="wrap-slick1">
 			<div class="slick1">
-				<div class="item-slick1 item1-slick1" style="background-image: url(carrito/images/master-slide-07.jpg);">
-					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
-						<h2 class="caption1-slide1 xl-text2 t-center bo14 p-b-6 animated visible-false m-b-22" data-appear="fadeInUp">
-							Leather Bags
-						</h2>
-
-						<span class="caption2-slide1 m-text1 t-center animated visible-false m-b-33" data-appear="fadeInDown">
-							New Collection 2018
-						</span>
-
-						<div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="zoomIn">
-							<!-- Button -->
-							<a href="product.html" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
-								Shop Now
-							</a>
+				<a href="{{ route('tienda')}}">
+					<div class="item-slick1 item1-slick1" style="background-image: url(carrito/images/banner0.png);">
+						<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+							<div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="zoomIn">
+							</div>
 						</div>
 					</div>
-				</div>
+				</a>
 
-				<div class="item-slick1 item2-slick1" style="background-image: url(carrito/images/master-slide-06.jpg);">
-					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
-						<h2 class="caption1-slide1 xl-text2 t-center bo14 p-b-6 animated visible-false m-b-22" data-appear="rollIn">
-							Leather Bags
-						</h2>
-
-						<span class="caption2-slide1 m-text1 t-center animated visible-false m-b-33" data-appear="lightSpeedIn">
-							New Collection 2018
-						</span>
-
-						<div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="slideInUp">
-							<!-- Button -->
-							<a href="product.html" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
-								Shop Now
-							</a>
+				<a href="{{ route('precios')}}">
+					<div class="item-slick1 item2-slick1" style="background-image: url(carrito/images/banner1.png);">
+						<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+							<div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="slideInUp">
+							</div>
 						</div>
 					</div>
-				</div>
+				</a>
 
-				<div class="item-slick1 item3-slick1" style="background-image: url(carrito/images/master-slide-02.jpg);">
-					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
-						<h2 class="caption1-slide1 xl-text2 t-center bo14 p-b-6 animated visible-false m-b-22" data-appear="rotateInDownLeft">
-							Leather Bags
-						</h2>
-
-						<span class="caption2-slide1 m-text1 t-center animated visible-false m-b-33" data-appear="rotateInUpRight">
-							New Collection 2018
-						</span>
-
-						<div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="rotateIn">
-							<!-- Button -->
-							<a href="product.html" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
-								Shop Now
-							</a>
+				<a href="http://payapp.mx/">
+					<div class="item-slick1 item3-slick1" style="background-image: url(carrito/images/banner2.png);">
+						<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+							<div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="rotateIn">
+							</div>
 						</div>
 					</div>
-				</div>
+				</a>
 
 			</div>
 		</div>
@@ -152,15 +122,11 @@
 								<div class="col-sm-6 col-md-4 col-lg-3 p-b-50">
 
 									<div class="block2">
-										<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
+										<div class="block2-img wrap-pic-w of-hidden pos-relative">
 											{{--@foreach ($producto->Imagen as $value => $imgProdu)--}}
 													 <img src="{{ !empty($producto->Imagen[0]->id_producto) && !empty($producto->Imagen[0]->imgPrincipal) ? asset('imagenes/'.$producto->Imagen[0]->path) : ""}}" alt="IMG-PRODUCT">
 											{{--@endforeach--}}
 											<div class="block2-overlay trans-0-4">
-												<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
-													<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
-													<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
-												</a>
 												<div class="block2-btn-addcart w-size1 trans-0-4">
 													<a href="{{ route('carrito-add', $producto->id)}}" role="button" class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">Agregar</a>
 												</div>
@@ -208,36 +174,47 @@
 	<!-- Shipping -->
 	<section class="shipping bgwhite p-t-62 p-b-46">
 		<div class="flex-w p-l-15 p-r-15">
+
 			<div class="flex-col-c w-size5 p-l-15 p-r-15 p-t-16 p-b-15 respon1">
 				<h4 class="m-text12 t-center">
-					Free Delivery Worldwide
+					Duplica tus ventas
 				</h4>
 
 				<a href="#" class="s-text11 t-center">
-					Click here for more info
+					RECUERDA CON ESTE SERVICIO MAS GENTE VISITARA TU NEGOCIO POR LO QUE ES UNA EXCELENTE OPCIÓN PARA INCREMENTAR TU GANANCIAS.
 				</a>
 			</div>
 
 			<div class="flex-col-c w-size5 p-l-15 p-r-15 p-t-16 p-b-15 bo2 respon2">
 				<h4 class="m-text12 t-center">
-					30 Days Return
+					Afíliate sin tramites
 				</h4>
 
 				<span class="s-text11 t-center">
-					Simply return it within 30 days for an exchange.
+					SIN CONTRATOS, SIN PLAZOS FORZOSOS O MÍNIMOS DE COMPRA, CON NOSOTROS SOLO ADQUIERES LO QUE NECESITAS CUANDO LO NECESITAS.
 				</span>
 			</div>
 
-			<div class="flex-col-c w-size5 p-l-15 p-r-15 p-t-16 p-b-15 respon1">
+			<div class="flex-col-c w-size5 p-l-15 p-r-15 p-t-16 p-b-15  respon1">
 				<h4 class="m-text12 t-center">
-					Store Opening
+					Fácil y sencillo
 				</h4>
 
 				<span class="s-text11 t-center">
-					Shop open from Monday to Sunday
+					SOLO NECESITAS TENER WHATSAPP O TELEGRAM PARA AFILIARTE CON NOSOTROS, ADEMAS CONTARAS CON ATENCIÓN Y SOPORTE EN TODO MOMENTO
 				</span>
 			</div>
+
 		</div>
 	</section>
 
 @endsection
+@push('scriptsC')
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$(".slick-cloned").attr('id', 'marcas')
+	});
+
+	</script>
+
+@endpush

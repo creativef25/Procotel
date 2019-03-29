@@ -4,9 +4,9 @@
 @endpush
 @section('containerC')
 
-  <section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(carrito/images/heading-pages-05.jpg);">
+  <section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(carrito/images/contrato.png);">
     <h2 class="l-text2 t-center">
-      Planes
+      Renovaciones
     </h2>
   </section>
 

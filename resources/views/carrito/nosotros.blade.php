@@ -1,7 +1,7 @@
 @extends('carrito')
 @section('containerC')
 
-  <section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(carrito/images/heading-pages-05.jpg);">
+  <section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(carrito/images/nosotros.png);">
 		<h2 class="l-text2 t-center">
 			Nosotros
 		</h2>

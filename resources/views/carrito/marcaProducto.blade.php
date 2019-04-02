@@ -30,14 +30,10 @@
 						<div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
 							<!-- Block2 -->
 							<div class="block2">
-								<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
+								<div class="block2-img wrap-pic-w of-hidden pos-relative">
 									<img src="{{ !empty($producto->Imagen[0]->id_producto) && !empty($producto->Imagen[0]->imgPrincipal) ? asset('imagenes/'.$producto->Imagen[0]->path) : ""}}" alt="IMG-PRODUCT">
 
 									<div class="block2-overlay trans-0-4">
-										<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
-											<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
-											<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
-										</a>
 
 										<div class="block2-btn-addcart w-size1 trans-0-4">
 											<!-- Button -->

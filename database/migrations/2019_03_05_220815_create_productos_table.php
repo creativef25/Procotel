@@ -27,11 +27,11 @@ class CreateProductosTable extends Migration
             $table->string('capacidad')->nullable();
             $table->string('memoria')->nullable();
             $table->integer('id_marca')->unsigned();
-            $table->foreign('id_marca')->references('id')->on('marcas');
+            $table->foreign('id_marca')->references('id')->on('marcas')->onDelete('cascade');
             $table->integer('id_categoria')->unsigned();
-            $table->foreign('id_categoria')->references('id')->on('categorias');
+            $table->foreign('id_categoria')->references('id')->on('categorias')->onDelete('cascade');
             $table->integer('id_gama')->unsigned();
-            $table->foreign('id_gama')->references('id')->on('gamas');
+            $table->foreign('id_gama')->references('id')->on('gamas')->onDelete('cascade');
             $table->timestamps();
         });
     }

@@ -26,7 +26,7 @@ class CreateDatosTable extends Migration
             $table->string('alcaldia');
             $table->integer('codigoPostal');
             $table->integer('id_usuario')->unsigned();
-            $table->foreign('id_usuario')->references('id')->on('users');
+            $table->foreign('id_usuario')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

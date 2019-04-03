@@ -10,184 +10,58 @@
     </h2>
   </section>
 
-  <div id="generic_price_table">
-  <section>
+  <section class="newproduct bgwhite p-t-45 p-b-105">
     <div class="container">
+      <div class="sec-title p-b-60">
+        <h3 class="m-text5 t-center">
+          Iphone
+        </h3>
+      </div>
 
-      <!--BLOCK ROW START-->
-      <div class="row">
-        <div class="col-md-4">
+      <!-- Slide2 -->
+      <div class="wrap-slick2">
+        <div class="slick2">
 
-          <!--PRICE CONTENT START-->
-          <div class="generic_content clearfix">
+          <div class="item-slick2 p-l-15 p-r-15">
+            <!-- Block2 -->
+            <div class="block2">
+              <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelsale">
+                <img src="images/item-07.jpg" alt="IMG-PRODUCT">
 
-            <!--HEAD PRICE DETAIL START-->
-            <div class="generic_head_price clearfix">
+                <div class="block2-overlay trans-0-4">
+                  <a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+                    <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+                    <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+                  </a>
 
-              <!--HEAD CONTENT START-->
-              <div class="generic_head_content clearfix">
-
-                <!--HEAD START-->
-                <div class="head_bg"></div>
-                <div class="head">
-                  <span>Telcel 40</span>
+                  <div class="block2-btn-addcart w-size1 trans-0-4">
+                    <!-- Button -->
+                    <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+                      Add to Cart
+                    </button>
+                  </div>
                 </div>
-                <!--//HEAD END-->
-
               </div>
-              <!--//HEAD CONTENT END-->
 
-              <!--PRICE START-->
-              <div class="generic_price_tag clearfix">
-                <span class="price">
-                  <span class="sign">$</span>
-                  <span class="currency">199</span>
-                  <span class="cent">.00</span>
-                  <span class="month">/Mensual</span>
+              <div class="block2-txt p-t-20">
+                <a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+                  Frayed denim shorts
+                </a>
+
+                <span class="block2-oldprice m-text7 p-r-5">
+                  $29.50
+                </span>
+
+                <span class="block2-newprice m-text8 p-r-5">
+                  $15.90
                 </span>
               </div>
-              <!--//PRICE END-->
-
             </div>
-            <!--//HEAD PRICE DETAIL END-->
-
-            <!--FEATURE LIST START-->
-            <div class="generic_feature_list">
-              <ul>
-                <li><span>40</span> Minutos Indistintos</li>
-                <li><span>200</span> Minutos Telcel-Telcel</li>
-                <li><span>200</span> MB</li>
-                <li><span>1.98</span> Minuto Adicional</li>
-              </ul>
-            </div>
-            <!--//FEATURE LIST END-->
-
-            <!--BUTTON START-->
-            <div class="generic_price_btn clearfix">
-              <a class="" href="https://api.whatsapp.com/send?phone=573014080340&text=Hola%2C%20deseo%20adquirir%20un%20plan%20con%20ustedes" target="_blank">Contratar</a>
-            </div>
-            <!--//BUTTON END-->
-
           </div>
-          <!--//PRICE CONTENT END-->
 
-        </div>
-
-        <div class="col-md-4">
-
-          <!--PRICE CONTENT START-->
-          <div class="generic_content active clearfix">
-
-            <!--HEAD PRICE DETAIL START-->
-            <div class="generic_head_price clearfix">
-
-              <!--HEAD CONTENT START-->
-              <div class="generic_head_content clearfix">
-
-                <!--HEAD START-->
-                <div class="head_bg"></div>
-                <div class="head">
-                  <span>TELCEL 700</span>
-                </div>
-                <!--//HEAD END-->
-
-              </div>
-              <!--//HEAD CONTENT END-->
-
-              <!--PRICE START-->
-              <div class="generic_price_tag clearfix">
-                <span class="price">
-                  <span class="sign">$</span>
-                  <span class="currency">699</span>
-                  <span class="cent">.00</span>
-                  <span class="month">/Mensual</span>
-                </span>
-              </div>
-              <!--//PRICE END-->
-
-            </div>
-            <!--//HEAD PRICE DETAIL END-->
-
-            <!--FEATURE LIST START-->
-            <div class="generic_feature_list">
-              <ul>
-                <li><span>700</span> Minutos Indistintos</li>
-                <li><span>300</span> Minutos Telcel-Telcel</li>
-                <li><span>3</span> Números Gratis</li>
-                <li><span>150</span> Mensajes de Texto</li>
-                <li><span>600</span> MB</li>
-              </ul>
-            </div>
-            <!--//FEATURE LIST END-->
-
-            <!--BUTTON START-->
-            <div class="generic_price_btn clearfix">
-              <a class="" href="https://api.whatsapp.com/send?phone=573014080340&text=Hola%2C%20deseo%20adquirir%20un%20plan%20con%20ustedes" target="_blank">Contratar</a>
-            </div>
-            <!--//BUTTON END-->
-
-          </div>
-          <!--//PRICE CONTENT END-->
-
-        </div>
-        <div class="col-md-4">
-
-          <!--PRICE CONTENT START-->
-          <div class="generic_content clearfix">
-
-            <!--HEAD PRICE DETAIL START-->
-            <div class="generic_head_price clearfix">
-
-              <!--HEAD CONTENT START-->
-              <div class="generic_head_content clearfix">
-
-                <!--HEAD START-->
-                <div class="head_bg"></div>
-                <div class="head">
-                  <span>TELCEL 375</span>
-                </div>
-                <!--//HEAD END-->
-
-              </div>
-              <!--//HEAD CONTENT END-->
-
-              <!--PRICE START-->
-              <div class="generic_price_tag clearfix">
-                <span class="price">
-                  <span class="sign">$</span>
-                  <span class="currency">399</span>
-                  <span class="cent">.00</span>
-                  <span class="month">/Mensual</span>
-                </span>
-              </div>
-              <!--//PRICE END-->
-
-            </div>
-            <!--//HEAD PRICE DETAIL END-->
-
-            <!--FEATURE LIST START-->
-            <div class="generic_feature_list">
-              <ul>
-                <li><span>375</span> Minutos Indistintos</li>
-                <li><span>175</span> Minutos Telcel-Telcel</li>
-                <li><span>2</span> Números Gratis</li>
-                <li><span>85</span> Mensajes de Texto</li>
-                <li><span>450</span> MB</li>
-              </ul>
-            </div>
-            <!--//FEATURE LIST END-->
-
-            <!--BUTTON START-->
-            <div class="generic_price_btn clearfix">
-              <a class="" href="https://api.whatsapp.com/send?phone=573014080340&text=Hola%2C%20deseo%20adquirir%20un%20plan%20con%20ustedes" target="_blank">Contratar</a>
-            </div>
-            <!--//BUTTON END-->
-          </div>
-          <!--//PRICE CONTENT END-->
         </div>
       </div>
-      <!--//BLOCK ROW END-->
+
     </div>
   </section>
-
 @endsection

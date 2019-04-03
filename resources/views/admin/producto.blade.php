@@ -21,6 +21,7 @@
             </div>
             <div class="card-body">
               <form action="{{ route('producto.store')}}" method="POST">
+
                 {{ csrf_field() }}
                 <div class="row">
                   <div class="col-md-3">
@@ -217,7 +218,7 @@
           <div class="modal-body">
             <form action="{{ route('producto.update', $modalProdu->id)}}" method="post">
               {{ csrf_field() }}
-              <input type="hidden" name="_method" value="PUT">
+              <input type="hidden" name="_method" value="PATCH">
               <div class="col-md-12">
                 <div class="form-group bmd-form-group">
                   <label class="bmd-label-floating">Nombre del equipo</label>

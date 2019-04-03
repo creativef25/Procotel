@@ -28,6 +28,7 @@ Route::group(['middleware' => ['auth', 'admin:admin']], function(){
   Route::get('detalle/pedido/{id}', 'PrincipalController@detallePedido')->name('DetallePed');
   Route::get('entrega/{id}', 'PrincipalController@entregado')->name('entrega');
   Route::get('/pedido', 'PrincipalController@pedidosA')->name('pedidosA');
+  Route::resource('promociones', 'PromocionesController');
 
 });
 

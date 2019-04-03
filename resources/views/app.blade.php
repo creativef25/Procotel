@@ -68,6 +68,12 @@
             </a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="{{ route('promociones.index')}}">
+              <i class="material-icons">star</i>
+              <p>PROMOCIONES</p>
+            </a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="{{ route('usuarios.index')}}">
               <i class="material-icons">group</i>
               <p>USUARIOS</p>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Producto;
+use App\Promocion;
 
 class PromocionesController extends Controller
 {
@@ -37,7 +38,9 @@ class PromocionesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $promo = Promocion::create($request->all());
+        return redirect()->route('promociones.index')
+                         ->with('success', 'Se guradaron correctamente');
     }
 
     /**
@@ -86,7 +89,10 @@ class PromocionesController extends Controller
     }
 
 
-    public function ObtenerPrecio(){
-      
+    public function ObtenerPrecio(Request $request){
+
+      $precio = Producto::find($request->id);
+
+      return response()->json(array('precio' => $precio->precio), 200);
     }
 }

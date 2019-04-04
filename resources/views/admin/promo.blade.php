@@ -27,7 +27,7 @@
                   <div class="col-md-3">
                     <div class="form-group bmd-form-group">
                       <label for="marcaEquipo">Producto</label>
-                      <select class="form-control" id="productoId" name="id_marca">
+                      <select class="form-control" id="productoId" name="id_producto">
                         @foreach ($producto as $produ)
                           <option class="text-success" value="{{ $produ->id}}">{{ $produ->nombre}} {{$produ->modelo}}</option>
                         @endforeach
@@ -35,8 +35,8 @@
                     </div>
                   </div>
                   <div class="col-md-3">
+                    <label class="bmd-label-floating">Precio</label>
                     <div class="form-group bmd-form-group">
-                      <label class="bmd-label-floating">Precio</label>
                       <input type="text" class="form-control" name="precio" id="precio" value="">
                     </div>
                   </div>
@@ -94,7 +94,17 @@
 
     $(document).ready(function(){
       $("#productoId").on('change', function(){
-        axios.get()
+        var id = $(this).val();
+
+        axios.post('promo/precio',{
+          id:id
+        }).then(function(response){
+          $("#precio").val(response.data.precio);
+          //console.log(response.data.precio);
+        }).catch(function(error){
+          console.log(error);
+        });
+
       });
     });
 

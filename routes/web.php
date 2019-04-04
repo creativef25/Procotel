@@ -29,6 +29,7 @@ Route::group(['middleware' => ['auth', 'admin:admin']], function(){
   Route::get('entrega/{id}', 'PrincipalController@entregado')->name('entrega');
   Route::get('/pedido', 'PrincipalController@pedidosA')->name('pedidosA');
   Route::resource('promociones', 'PromocionesController');
+  Route::post('promo/precio', 'PromocionesController@ObtenerPrecio')->name('preciopromo');
 
 });
 

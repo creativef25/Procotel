@@ -29,4 +29,8 @@ class Producto extends Model
     public function pedido(){
       return $this->belongsToMany('App\Pedido', 'detalle__productos', 'id_producto', 'id_pedido');
     }
+
+    public function Promo(){
+      return $this->hasOne('App\Promocion', 'id_producto', 'id');
+    }
 }

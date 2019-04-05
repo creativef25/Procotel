@@ -78,6 +78,29 @@
                       <th>Acciones</th>
                     </tr>
                   </thead>
+                  @foreach ($promo as $promocion)
+                    <tbody>
+                      <tr>
+                        <td>{{ $promocion->id}}</td>
+                        <td>{{ $promocion->producto->nombre . " " . $promocion->producto->modelo}}</td>
+                        <td>$ {{ $promocion->precio}}.00</td>
+                        <td>$ {{ $promocion->precio1}}.00</td>
+                        <td>$ {{ $promocion->precio2}}.00</td>
+                        <td class="td-action text-left btn-group">
+                          <button type="button" rel="tooltip" data-toggle="modal" data-target="#promocion{{$promocion->id}}" class="btn btn-white btn-link btn-sm" data-original-title="Editar">
+                            <i class="material-icons">edit</i>
+                          </button>
+                          <form action="{{route('promociones.destroy', $promocion->id)}}" method="POST">
+                            {{ csrf_field() }}
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button type="submit" rel="tooltip" title="" class="btn btn-white btn-link btn-sm" data-original-title="Eliminar">
+                              <i class="material-icons">close</i>
+                            </button>
+                          </form>
+                        </td>
+                      </tr>
+                    </tbody>
+                  @endforeach
                 </table>
               </div>
             </div>
@@ -86,6 +109,56 @@
       </div>
     </div>
   </div>
+
+  @foreach ($promo as $promoci)
+    <div class="modal fade" id="promocion{{$promoci->id}}" tabindex="-1" role="dialog" aria-labelledby="promocionLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modificar promoción</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="{{ route('promociones.update', $promoci->id)}}" method="post">
+              {{ csrf_field() }}
+              <input type="hidden" name="_method" value="PATCH">
+              <div class="col-md-12">
+                <div class="form-group bmd-form-group">
+                  <label for="marcaEquipo">Producto</label>
+                  <select class="form-control text-success" name="id_producto">
+                    @foreach ($producto as $produ)
+                      <option class="text-success" value="{{ $produ->id}}">{{ $produ->nombre}} {{$produ->modelo}}</option>
+                    @endforeach
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group bmd-form-group">
+                  <label class="bmd-label-floating">Precio</label>
+                  <input type="text" class="form-control text-success" name="precio" id="memoriaProducto" value="{{ $promoci->precio}}">
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group bmd-form-group">
+                  <label class="bmd-label-floating">18 meses</label>
+                  <input type="text" class="form-control text-success" name="precio1" id="memoriaProducto" value="{{ $promoci->precio1}}">
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group bmd-form-group">
+                  <label class="bmd-label-floating">24 meses</label>
+                  <input type="text" class="form-control text-success" name="precio2" id="memoriaProducto" value="{{ $promoci->precio2}}">
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary pull-right">Actualizar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  @endforeach
 
 @endsection
 @push('scripts')

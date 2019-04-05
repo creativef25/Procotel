@@ -25,9 +25,9 @@
 
 				<div class="col-sm-6 col-md-8 col-lg-9 p-b-50">
 					<!-- Product -->
-					<div class="row">
+					<div class="row" id="conte">
             @foreach ($produ as $producto)
-						<div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
+						<div class="col-sm-12 col-md-6 col-lg-4 p-b-50" >
 							<!-- Block2 -->
 							<div class="block2">
 								<div class="block2-img wrap-pic-w of-hidden pos-relative">
@@ -53,6 +53,7 @@
 						</div>
           @endforeach
 					</div>
+          <div class="holder pagination flex-m flex-w p-t-26"></div>
 				</div>
 			</div>
 		</div>
@@ -102,4 +103,23 @@
   	    });
   	</script>
   <!--===============================================================================================-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="{{ asset('carrito/js/jPages.js')}}"></script>
+    <script type="text/javascript">
+    $(function(){
+
+      $('div.holder').jPages({
+        containerID: 'conte',
+        perPage: 12,
+        previous: false,
+        next: false
+      });
+
+      $('div.holder a').addClass('item-pagination flex-c-m trans-0-4');
+
+    });
+
+    </script>
+
+
 @endpush

@@ -16,8 +16,9 @@ class PromocionesController extends Controller
     public function index()
     {
       $producto = Producto::all();
+      $promo = Promocion::all();
 
-        return view('admin.promo', compact('producto'));
+        return view('admin.promo', compact('producto', 'promo'));
     }
 
     /**
@@ -38,9 +39,14 @@ class PromocionesController extends Controller
      */
     public function store(Request $request)
     {
-        $promo = Promocion::create($request->all());
+        $promo = new Promocion();
+        $promo->id_producto = $request->id_producto;
+        $promo->precio = $request->precio;
+        $promo->precio1 = $request->precio1;
+        $promo->precio2 = $request->precio2;
+        $promo->save();
         return redirect()->route('promociones.index')
-                         ->with('success', 'Se guradaron correctamente');
+                         ->with('success', 'Los datos se guardaron correctamente.');
     }
 
     /**
@@ -74,7 +80,14 @@ class PromocionesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+      $promo = Promocion::find($id);
+      $promo->id_producto = $request->id_producto;
+      $promo->precio = $request->precio;
+      $promo->precio1 = $request->precio1;
+      $promo->precio2 = $request->precio2;
+      $promo->update();
+      return redirect()->route('promociones.index')
+                       ->with('success', 'Tu registro se actualizo correctamente');
     }
 
     /**
@@ -85,7 +98,9 @@ class PromocionesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $promo = Promocion::find($id)->delete();
+        return redirect()->route('promociones.index')
+                         ->with('success', 'Los datos se eliminaron correctamente.');
     }
 
 

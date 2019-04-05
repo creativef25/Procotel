@@ -7,6 +7,7 @@ use App\Marca;
 use App\Pedido;
 use App\Producto;
 use App\Categoria;
+use App\Promocion;
 
 class PrincipalController extends Controller
 {
@@ -21,7 +22,7 @@ class PrincipalController extends Controller
     public function principal(){
 
       $marca = Marca::all();
-      $produ = Producto::all();
+      $produ = Producto::inRandomOrder()->take(16)->get();
 
       return view('carrito.principal', compact('marca','produ'));
     }
@@ -75,6 +76,13 @@ class PrincipalController extends Controller
     }
 
     public function precios(){
-      return view('carrito.precios');
+      $promo =  Promocion::all();
+      return view('carrito.precios', compact('promo'));
+    }
+
+    public function detallePromocion($id){
+
+      $produ = Producto::find($id);
+      return view('carrito.detallePromo', compact('produ'));
     }
 }

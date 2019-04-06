@@ -17,24 +17,25 @@
 				</div>
 
 				<div class="col-md-6 p-b-30">
-					<form class="leave-comment">
+					<form class="leave-comment" method="post" action="{{ route('correo')}}">
+            {{ csrf_field() }}
 						<h4 class="m-text26 p-b-36 p-t-15">
 							Envianos un mensaje:
 						</h4>
 
 						<div class="bo4 of-hidden size15 m-b-20">
-							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="name" placeholder="Nombre completo">
+							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="nombre" placeholder="Nombre completo">
 						</div>
 
 						<div class="bo4 of-hidden size15 m-b-20">
-							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="phone-number" placeholder="Numero de telefono">
+							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="telefono" placeholder="Numero de telefono">
 						</div>
 
 						<div class="bo4 of-hidden size15 m-b-20">
 							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="email" placeholder="Correo">
 						</div>
 
-						<textarea class="dis-block s-text7 size20 bo4 p-l-22 p-r-22 p-t-13 m-b-20" name="message" placeholder="Mensaje"></textarea>
+						<textarea class="dis-block s-text7 size20 bo4 p-l-22 p-r-22 p-t-13 m-b-20" name="mensaje" placeholder="Mensaje"></textarea>
 
 						<div class="w-size25">
 							<!-- Button -->

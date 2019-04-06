@@ -48,6 +48,7 @@ Route::get('/nosotros', 'PrincipalController@nosotros')->name('nosotros');
 Route::get('/tienda', 'PrincipalController@tienda')->name('tienda');
 Route::get('/precios', 'PrincipalController@precios')->name('precios');
 Route::get('/detalle/promocion/{id}', 'PrincipalController@detallePromocion')->name('detallePromo');
+Route::post('correo/envio', 'PrincipalController@correo')->name('correo');
 
 Route::bind('producto', function($id){
   return App\Producto::where('id', $id)->first();

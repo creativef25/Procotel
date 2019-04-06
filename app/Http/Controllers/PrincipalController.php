@@ -85,4 +85,9 @@ class PrincipalController extends Controller
       $produ = Producto::find($id);
       return view('carrito.detallePromo', compact('produ'));
     }
+
+    public function correo(Request $request){
+
+      return redirect()->route('procotel');
+    }
 }

@@ -14,11 +14,23 @@
         </li>
 
         <li>
-          <a href="{{ route('tienda')}}">Tienda</a>
+          <a href="{{ route('tienda')}}">Amigo Kit</a>
         </li>
 
         <li>
-          <a href="{{ route('precios')}}">Renovacion de Planes</a>
+          <a href="{{-- route('precios')--}}">Planes</a>
+          <ul class="sub_menu">
+            <li><a href="#">Empresas</a></li>
+            <li><a href="#">Personal</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="{{-- route('nosotros')--}}">Servicios de valor agregado</a>
+        </li>
+
+        <li>
+          <a href="{{-- route('nosotros')--}}">Promociones</a>
         </li>
 
         <li>
@@ -211,11 +223,23 @@
             </li>
 
             <li>
-              <a href="{{ route('tienda')}}">Tienda</a>
+              <a href="{{ route('tienda')}}">Amigo Kit</a>
             </li>
 
             <li>
-              <a href="{{ route('precios')}}">Renovacion de Planes</a>
+              <a href="{{-- route('precios')--}}">Planes</a>
+              <ul class="sub_menu">
+                <li><a href="#">Empresas</a></li>
+                <li><a href="#">Personal</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="{{-- route('nosotros')--}}">Servicios de valor agregado</a>
+            </li>
+
+            <li>
+              <a href="{{-- route('nosotros')--}}">Promociones</a>
             </li>
 
             <li>
@@ -343,11 +367,24 @@
         </li>
 
         <li class="item-menu-mobile">
-          <a href="{{ route('tienda')}}">Tienda</a>
+          <a href="{{ route('tienda')}}">Amigo Kit</a>
         </li>
 
         <li class="item-menu-mobile">
-          <a href="{{ route('precios')}}">Renovacion de Planes</a>
+          <a href="{{-- route('precios')--}}">Planes</a>
+          <ul class="sub-menu">
+            <li><a href="#">Empresas</a></li>
+            <li><a href="#">Personal</a></li>
+          </ul>
+          <i class="arrow-main-menu fa fa-angle-right" aria-hidden="true"></i>
+        </li>
+
+        <li class="item-menu-mobile">
+          <a href="{{-- route('nosotros')--}}">Servicios de valor agregado</a>
+        </li>
+
+        <li class="item-menu-mobile">
+          <a href="{{-- route('nosotros')--}}">Promociones</a>
         </li>
 
         <li class="item-menu-mobile">

@@ -72,7 +72,8 @@ class PrincipalController extends Controller
     public function tienda(){
       $cate = Categoria::all();
       $produ = Producto::all();
-      return view('carrito.tienda', compact('cate', 'produ'));
+      $marca = Marca::all();
+      return view('carrito.tienda', compact('cate', 'produ', 'marca'));
     }
 
     public function precios(){
@@ -89,5 +90,10 @@ class PrincipalController extends Controller
     public function correo(Request $request){
 
       return redirect()->route('procotel');
+    }
+
+    public function busquedaCate(Request $request){
+      $cate = Producto::where('id_categoria', $request->id)->get();
+      return $cate;
     }
 }

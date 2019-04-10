@@ -13,12 +13,24 @@
 						<ul class="p-b-54">
               @foreach ($cate as $catego)
 							<li class="p-t-4">
-								<a href="#" class="s-text13 active1">
-									{{$catego->nombre}}
-								</a>
+                <span data-id="{{$catego->id}}"  id="categ" class="s-text13 active1">{{$catego->nombre}}</span>
 							</li>
               @endforeach
 						</ul>
+
+            <h4 class="m-text14 p-b-7">
+              Marcas
+            </h4>
+
+            <ul class="p-b-54">
+              @foreach ($marca as $mar)
+              <li class="p-t-4">
+                <a href="" id="marca" class="s-text13 active1">
+                  {{$mar->nombre}}
+                </a>
+              </li>
+              @endforeach
+            </ul>
 
 					</div>
 				</div>
@@ -106,6 +118,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script src="{{ asset('carrito/js/jPages.js')}}"></script>
     <script type="text/javascript">
+
     $(function(){
 
       $('div.holder').jPages({
@@ -118,6 +131,31 @@
       $('div.holder a').addClass('item-pagination flex-c-m trans-0-4');
 
     });
+
+    </script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript">
+
+    $("#categ").click(function(){
+      var id = $(this).data('id');
+
+      axios.post('busqueda/categoria',{
+        id:id
+      }).then(function(response){
+
+        hola();
+
+      }).catch(function(error){
+        console.log(error);
+      });
+
+    });
+
+    function hola(){
+      var hola = $('#conte').html();
+      console.log(hola);
+    }
+
 
     </script>
 

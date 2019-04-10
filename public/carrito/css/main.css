@@ -44,6 +44,10 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   width: 150px !important;
 }
 
+#categ:hover{
+  color: #e65540;
+}
+
 @font-face {
   font-family: Montserrat-Regular;
   src: url('../fonts/montserrat/Montserrat-Regular.ttf');
@@ -1363,7 +1367,7 @@ li.sale-noti > a {
 
 .item-slick1 {
   height: 570px;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
 }

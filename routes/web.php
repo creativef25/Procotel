@@ -50,6 +50,7 @@ Route::get('/precios', 'PrincipalController@precios')->name('precios');
 Route::get('/detalle/promocion/{id}', 'PrincipalController@detallePromocion')->name('detallePromo');
 Route::post('correo/envio', 'PrincipalController@correo')->name('correo');
 Route::post('busqueda/categoria', 'PrincipalController@busquedaCate')->name('busquedaCate');
+Route::post('busqueda/marca', 'PrincipalController@busquedaMarca')->name('busquedaMarca');
 
 Route::bind('producto', function($id){
   return App\Producto::where('id', $id)->first();

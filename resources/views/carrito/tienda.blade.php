@@ -13,7 +13,7 @@
 						<ul class="p-b-54">
               @foreach ($cate as $catego)
 							<li class="p-t-4">
-                <span data-id="{{$catego->id}}"  id="categ" class="s-text13 active1">{{$catego->nombre}}</span>
+                <span data-id="{{$catego->id}}"  id="categ" class="s-text13 active1 categ">{{$catego->nombre}}</span>
 							</li>
               @endforeach
 						</ul>
@@ -25,9 +25,7 @@
             <ul class="p-b-54">
               @foreach ($marca as $mar)
               <li class="p-t-4">
-                <a href="" id="marca" class="s-text13 active1">
-                  {{$mar->nombre}}
-                </a>
+                <span data-id="{{ $mar->id}}"  id="marca" class="s-text13 active1 marca">{{$mar->nombre}}</span>
               </li>
               @endforeach
             </ul>
@@ -39,7 +37,7 @@
 					<!-- Product -->
 					<div class="row" id="conte">
             @foreach ($produ as $producto)
-						<div class="col-sm-12 col-md-6 col-lg-4 p-b-50" >
+						<div class="col-sm-12 col-md-6 col-lg-4 p-b-50 entidades" entidad="{{ $producto->id}}" id="primerDiv{{ $producto->id}}" >
 							<!-- Block2 -->
 							<div class="block2">
 								<div class="block2-img wrap-pic-w of-hidden pos-relative">
@@ -136,27 +134,49 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script type="text/javascript">
 
-    $("#categ").click(function(){
+    $(".categ").click(function(){
       var id = $(this).data('id');
+      $(".entidades").remove();
 
       axios.post('busqueda/categoria',{
         id:id
       }).then(function(response){
-
-        hola();
-
+        $("#conte").append(response.data);
+        $("#conte").css("min-height", "unset");
+        if ($.browser.device(
+          /android|webos|iphone|ipad|ipod|blackberry|iemobile|operamini/i.test(navigator.userAgent.toLowerCase()))) {
+            scroll();
+        }
       }).catch(function(error){
         console.log(error);
       });
 
     });
 
-    function hola(){
-      var hola = $('#conte').html();
-      console.log(hola);
+    $(".marca").click(function(){
+      var id = $(this).data('id');
+      $(".entidades").remove();
+      axios.post('busqueda/marca',{
+        id:id
+      }).then(function(response){
+        $("#conte").append(response.data);
+        $("#conte").css("min-height", "unset");
+        if ($.browser.device(
+          /android|webos|iphone|ipad|ipod|blackberry|iemobile|operamini/i.test(navigator.userAgent.toLowerCase()))) {
+            scroll();
+        }
+      }).catch(function(error){
+        console.log(error);
+      });
+
+    });
+
+    function scroll(){
+      var posicion = $("#conte").offset().top;
+      $("html, body").animate({
+        scrollTop: posicion
+      }, 2000);
     }
-
-
     </script>
 
 

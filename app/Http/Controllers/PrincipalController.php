@@ -94,6 +94,11 @@ class PrincipalController extends Controller
 
     public function busquedaCate(Request $request){
       $cate = Producto::where('id_categoria', $request->id)->get();
-      return $cate;
+      return view('carrito.catego', compact('cate'));
+    }
+
+    public function busquedaMarca(Request $request){
+      $marca = Producto::where('id_marca', $request->id)->get();
+      return view('carrito.marca', compact('marca'));
     }
 }

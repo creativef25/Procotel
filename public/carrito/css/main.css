@@ -48,6 +48,10 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   color: #e65540;
 }
 
+#marca:hover{
+  color: #e65540;
+}
+
 @font-face {
   font-family: Montserrat-Regular;
   src: url('../fonts/montserrat/Montserrat-Regular.ttf');

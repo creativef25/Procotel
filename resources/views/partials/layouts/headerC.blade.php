@@ -32,5 +32,6 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('carrito/css/util.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('carrito/css/main.css')}}">
 <!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{{ asset('carrito/css/flotante.css')}}">
 </head>
 @stack('HeadC')

@@ -18,9 +18,15 @@
         </li>
 
         <li>
-          <a href="{{-- route('precios')--}}">Planes</a>
+          <a href="">Planes</a>
           <ul class="sub_menu">
-            <li><a href="#">Empresas</a></li>
+            <li>
+              <a href="">Empresas</a>
+              <ul class="sub_menu">
+                <li><a href="{{ route('precios')}}">Planes Empresariales</a></li>
+                <li><a href="">Equipos</a></li>
+              </ul>
+            </li>
             <li><a href="#">Personal</a></li>
           </ul>
         </li>
@@ -229,7 +235,13 @@
             <li>
               <a href="{{-- route('precios')--}}">Planes</a>
               <ul class="sub_menu">
-                <li><a href="#">Empresas</a></li>
+                <li>
+                  <a href="#">Empresas</a>
+                  <ul class="sub_menu">
+                    <li><a href="{{ route('precios')}}">Planes Empresariales</a></li>
+                    <li><a href="">Equipos</a></li>
+                  </ul>
+                </li>
                 <li><a href="#">Personal</a></li>
               </ul>
             </li>
@@ -373,7 +385,13 @@
         <li class="item-menu-mobile">
           <a href="{{-- route('precios')--}}">Planes</a>
           <ul class="sub-menu">
-            <li><a href="#">Empresas</a></li>
+            <li>
+              <a href="#">Empresas</a>
+              <ul class="sub-menu">
+                <li><a href="{{ route('precios')}}">Planes Empresariales</a></li>
+                <li><a href="">Equipos</a></li>
+              </ul>
+            </li>
             <li><a href="#">Personal</a></li>
           </ul>
           <i class="arrow-main-menu fa fa-angle-right" aria-hidden="true"></i>

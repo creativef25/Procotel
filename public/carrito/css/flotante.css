@@ -38,6 +38,6 @@ span{
 .flotante {
     display:scroll;
         position:fixed;
-        bottom:320px;
+        bottom:100px;
         right:0px;
 }

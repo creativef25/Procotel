@@ -55,6 +55,11 @@ class ProductoController extends Controller
         $pro->pantalla =  $request->pantalla;
         $pro->capacidad = $request->capacidad;
         $pro->memoria =  $request->memoria;
+        if ($request->empresarial != 1) {
+          $pro->empresarial = 0;
+        }else {
+          $pro->empresarial = $request->empresarial;
+        }
         $pro->id_marca = $request->id_marca;
         $pro->id_categoria = $request->id_categoria;
         $pro->id_gama = $request->id_gama;
@@ -96,7 +101,7 @@ class ProductoController extends Controller
      */
     public function update(Request $request, $id)
     {
-      $pro = Producto::find($id);
+      $pro = Producto::find($id->id);
       $pro->nombre = $request->nombre;
       $pro->descripcion = $request->descripcion;
       $pro->precio = $request->precio;
@@ -108,6 +113,11 @@ class ProductoController extends Controller
       $pro->pantalla =  $request->pantalla;
       $pro->capacidad = $request->capacidad;
       $pro->memoria =  $request->memoria;
+      if ($request->empresarial != 1) {
+        $pro->empresarial = 0;
+      }else {
+        $pro->empresarial = $request->empresarial;
+      }
       $pro->id_marca = $request->id_marca;
       $pro->id_categoria = $request->id_categoria;
       $pro->id_gama = $request->id_gama;
@@ -125,7 +135,7 @@ class ProductoController extends Controller
      */
     public function destroy($id)
     {
-        $pro = Producto::find($id)->delete();
+        $pro = Producto::find($id->id)->delete();
 
         return redirect()->route('producto.index')
                          ->with('success', 'Los datos se eliminaron correctamente.');

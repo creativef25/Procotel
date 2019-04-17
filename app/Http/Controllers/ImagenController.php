@@ -52,7 +52,16 @@ class ImagenController extends Controller
         $nombre = $this->random_string().".".$extension;
 
         \Image::make($file)->resize(720,960)->save($path.'/'.$nombre);
-      }else {
+      }elseif (!empty($request->promocion)) {
+        $file = $request->file('path');
+        $extension = $file->getClientOriginalExtension();
+        $path = public_path("/imagenes");
+        $nombre = $this->random_string().".".$extension;
+
+        \Image::make($file)->resize(1275,1650)->save($path.'/'.$nombre);
+      }
+
+      else {
         $file = $request->file('path');
         $extension = $file->getClientOriginalExtension();
         $path = public_path("/imagenes");
@@ -61,6 +70,7 @@ class ImagenController extends Controller
         \Image::make($file)->resize(500,480)->save($path.'/'.$nombre);
 
       }
+
         if ($request->inlineRadioOptions == "Marca") {
           $image = Imagen::create([
             'path' => $nombre,
@@ -70,6 +80,11 @@ class ImagenController extends Controller
           $image = Imagen::create([
             'path' => $nombre,
             'id_producto' => $request->id_producto,
+            ]);
+        }elseif (!empty($request->promocion)) {
+          $image = Imagen::create([
+            'path' => $nombre,
+            'promocion' => 1,
             ]);
         }
         else {

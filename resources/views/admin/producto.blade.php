@@ -77,9 +77,13 @@
                 </div>
                 <div class="row">
                   <div class="col-md-3">
-                    <div class="form-group bmd-form-group">
-                      <label class="bmd-label-floating">Descripción</label>
-                      <textarea class="form-control" name="descripcion" rows="8" ></textarea>
+                    <div class="form-check form-check-radio form-check-inline">
+                      <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" name="empresarial" value="1">Empresarial
+                        <span class="form-check-sign">
+                          <span class="check"></span>
+                        </span>
+                      </label>
                     </div>
                   </div>
                   <div class="col-md-3">
@@ -107,6 +111,12 @@
 
                 </div>
                 <div class="row">
+                  <div class="col-md-3">
+                    <div class="form-group bmd-form-group">
+                      <label class="bmd-label-floating">Descripción</label>
+                      <textarea class="form-control" name="descripcion" rows="8" ></textarea>
+                    </div>
+                  </div>
                   <div class="col-md-3">
                     <div class="form-group bmd-form-group">
                       <label for="categoriaEquipo">Categoria</label>
@@ -156,6 +166,7 @@
                       <th>Pantalla</th>
                       <th>Capacidad</th>
                       <th>Memoria</th>
+                      <th>Empresarial</th>
                       <th>Descripción</th>
                       <th>Marca</th>
                       <th>Categoria</th>
@@ -177,6 +188,7 @@
                         <td>{{ $product->pantalla}}</td>
                         <td>{{ $product->capacidad}}</td>
                         <td>{{ $product->memoria}}</td>
+                        <td>{{ $product->empresarial == 0 || $product->empresarial == 0 ? "No" : "Si"}}</td>
                         <td>{{ substr($product->descripcion, 0, 60)}}</td>
                         <td>{{$product->Marca->nombre}}</td>
                         <td>{{$product->Categ->nombre}}</td>
@@ -279,6 +291,16 @@
                   <input type="text" class="form-control text-success" name="memoria" id="memoriaProducto" value="{{ $modalProdu->memoria}}">
                 </div>
               </div>
+              <div class="col-md-12">
+                <div class="form-check form-check-radio form-check-inline">
+                  <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" name="empresarial" value="1">Empresarial
+                    <span class="form-check-sign">
+                      <span class="check"></span>
+                    </span>
+                  </label>
+                </div>
+              </div><br>
               <div class="col-md-12">
                 <div class="form-group bmd-form-group">
                   <label class="bmd-label-floating">Descripción</label>

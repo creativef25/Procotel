@@ -1,6 +1,6 @@
 <?php
 
-namespace App; 
+namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -8,7 +8,7 @@ class Imagen extends Model
 {
   protected $table =  'imagens';
 
-  protected $fillable = ['path', 'id_producto', 'id_marca','imgPrincipal'];
+  protected $fillable = ['path', 'id_producto', 'id_marca','imgPrincipal', 'promocion'];
 
   public function Producto(){
     return $this->belongsTo('App\Producto', 'id', 'id_producto');

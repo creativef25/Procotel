@@ -8,6 +8,7 @@ use App\Pedido;
 use App\Producto;
 use App\Categoria;
 use App\Promocion;
+use App\Imagen;
 
 class PrincipalController extends Controller
 {
@@ -100,5 +101,61 @@ class PrincipalController extends Controller
     public function busquedaMarca(Request $request){
       $marca = Producto::where('id_marca', $request->id)->get();
       return view('carrito.marca', compact('marca'));
+    }
+
+    public function equipos(){
+      $producto = Producto::where('empresarial', 1)
+                          ->where('id_categoria', 1)->get();
+      return view('carrito.equipos', compact('producto'));
+    }
+
+    public function detalleEquipo($id){
+      switch ($id) {
+        case '1':
+          $produ = Producto::where('empresarial', 1)
+                              ->where('id_categoria', 1)
+                              ->get();
+          $titulo = 'Móvil';
+          return view('carrito.equiEmpresa', compact('produ', 'titulo'));
+        break;
+        case '2':
+          $produ = Producto::where('empresarial', 1)
+                            ->where('id_categoria', 2)
+                            ->get();
+          $titulo = 'Tablet';
+          return view('carrito.equiEmpresa', compact('produ', 'titulo'));
+        break;
+        case '3':
+          $produ = Producto::where('empresarial', 1)
+                            ->where('id_categoria', 3)
+                            ->get();
+          $titulo = 'WiFi Móvil Telcel';
+          return view('carrito.equiEmpresa', compact('produ', 'titulo'));
+        break;
+        case '4':
+          $produ = Producto::where('empresarial', 1)
+                            ->where('id_categoria', 4)
+                            ->get();
+          $titulo = 'Módems USB';
+          return view('carrito.equiEmpresa', compact('produ', 'titulo'));
+        break;
+        case '5':
+          $produ = Producto::where('empresarial', 1)
+                            ->where('id_categoria', 5)
+                            ->get();
+          $titulo = 'Localización Vehicular';
+          return view('carrito.equiEmpresa', compact('produ', 'titulo'));
+        break;
+
+        default:
+          // code...
+          break;
+      }
+    }
+
+    public function promo(){
+
+      $imagen = Imagen::where('promocion', 1)->get();
+      return view('carrito.promociones', compact('imagen'));
     }
 }

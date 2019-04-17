@@ -132,7 +132,8 @@
               Ilimitado por promocion <br>
               <i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i> <i class="fa fa-facebook fa-2x" aria-hidden="true"></i> <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
             </th>
-            <th class="text-center">$ 899.00</th>
+            <th class="text-center">$ 899.00 <br>
+              Incluye Claro Video</th>
           </tr>
           <tr>
             <th class="text-center">9000 4G</th>

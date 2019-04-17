@@ -53,6 +53,14 @@
                       </span>
                     </label>
                   </div>
+                  <div class="form-check form-check-radio form-check-inline">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="promocion" id="promocion" value="1"> Promoción
+                      <span class="circle">
+                        <span class="check"></span>
+                      </span>
+                    </label>
+                  </div>
                 </div>
                 <div class="row">
                   <div class="col-md-12" hidden id="tablaMarca">
@@ -165,7 +173,7 @@
                       <tr>
                         <td>{{$imag->id}}</td>
                         <td>{{$imag->path}}</td>
-                        <td>{{empty($imag->id_producto) ? 'Marca' : 'Producto'}}</td>
+                        <td>{{empty($imag->id_producto) ? 'Marca' : !empty($imag->promocion) ? 'Promocion' : 'Producto'}}</td>
                         <td>
                           <img src="{{ asset('imagenes/'."$imag->path")}}" width="20%" alt="">
                         </td>

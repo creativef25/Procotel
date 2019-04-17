@@ -21,10 +21,10 @@
           <a href="">Planes</a>
           <ul class="sub_menu">
             <li>
-              <a href="">Empresas</a>
+              <a href="javascript:void(0);">Empresas</a>
               <ul class="sub_menu">
                 <li><a href="{{ route('precios')}}">Planes Empresariales</a></li>
-                <li><a href="">Equipos</a></li>
+                <li><a href="{{ route('equipos')}}">Equipos</a></li>
               </ul>
             </li>
             <li><a href="#">Personal</a></li>
@@ -36,7 +36,7 @@
         </li>
 
         <li>
-          <a href="{{-- route('nosotros')--}}">Promociones</a>
+          <a href="{{ route('promo')}}">Promociones</a>
         </li>
 
         <li>
@@ -236,10 +236,10 @@
               <a href="{{-- route('precios')--}}">Planes</a>
               <ul class="sub_menu">
                 <li>
-                  <a href="#">Empresas</a>
+                  <a href="javascript:void(0)">Empresas</a>
                   <ul class="sub_menu">
                     <li><a href="{{ route('precios')}}">Planes Empresariales</a></li>
-                    <li><a href="">Equipos</a></li>
+                    <li><a href="{{ route('equipos')}}">Equipos</a></li>
                   </ul>
                 </li>
                 <li><a href="#">Personal</a></li>
@@ -251,7 +251,7 @@
             </li>
 
             <li>
-              <a href="{{-- route('nosotros')--}}">Promociones</a>
+              <a href="{{ route('promo')}}">Promociones</a>
             </li>
 
             <li>
@@ -386,10 +386,10 @@
           <a href="{{-- route('precios')--}}">Planes</a>
           <ul class="sub-menu">
             <li>
-              <a href="#">Empresas</a>
+              <a href="javascript:void(0);">Empresas</a>
               <ul class="sub-menu">
                 <li><a href="{{ route('precios')}}">Planes Empresariales</a></li>
-                <li><a href="">Equipos</a></li>
+                <li><a href="{{ route('equipos')}}">Equipos</a></li>
               </ul>
             </li>
             <li><a href="#">Personal</a></li>
@@ -402,7 +402,7 @@
         </li>
 
         <li class="item-menu-mobile">
-          <a href="{{-- route('nosotros')--}}">Promociones</a>
+          <a href="{{ route('promo')}}">Promociones</a>
         </li>
 
         <li class="item-menu-mobile">

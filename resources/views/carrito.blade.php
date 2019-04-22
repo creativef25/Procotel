@@ -24,7 +24,7 @@
 
 	<div class="contenedor flotante">
 		<button class="botonF1" data-toggle="tooltip" data-placement="top" title="Chatea con nosotros">
-			<span><a href="https://wa.me/send?phone=5215544551508&text=Hola%20requiero%20informacion"><i class="fa fa-whatsapp fa-3x text-white" aria-hidden="true"></i></a></span>
+			<span><a href="https://api.whatsapp.com/send?phone=5215544551508&text=Hola%20requiero%20informacion" target="_blank"><i class="fa fa-whatsapp fa-3x text-white" aria-hidden="true"></i></a></span>
 		</button>
 	</div>
 

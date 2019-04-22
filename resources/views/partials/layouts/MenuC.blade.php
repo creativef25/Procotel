@@ -18,7 +18,7 @@
         </li>
 
         <li>
-          <a href="">Planes</a>
+          <a href="javascript:void(0);">Planes</a>
           <ul class="sub_menu">
             <li>
               <a href="javascript:void(0);">Empresas</a>
@@ -27,7 +27,7 @@
                 <li><a href="{{ route('equipos')}}">Equipos</a></li>
               </ul>
             </li>
-            <li><a href="#">Personal</a></li>
+            <li><a href="{{ route('sinLimite')}}">Personal</a></li>
           </ul>
         </li>
 
@@ -233,7 +233,7 @@
             </li>
 
             <li>
-              <a href="{{-- route('precios')--}}">Planes</a>
+              <a href="javascript:void(0);">Planes</a>
               <ul class="sub_menu">
                 <li>
                   <a href="javascript:void(0)">Empresas</a>
@@ -242,7 +242,7 @@
                     <li><a href="{{ route('equipos')}}">Equipos</a></li>
                   </ul>
                 </li>
-                <li><a href="#">Personal</a></li>
+                <li><a href="{{ route('sinLimite')}}">Personal</a></li>
               </ul>
             </li>
 
@@ -383,7 +383,7 @@
         </li>
 
         <li class="item-menu-mobile">
-          <a href="{{-- route('precios')--}}">Planes</a>
+          <a href="javascript:void(0);">Planes</a>
           <ul class="sub-menu">
             <li>
               <a href="javascript:void(0);">Empresas</a>
@@ -392,7 +392,7 @@
                 <li><a href="{{ route('equipos')}}">Equipos</a></li>
               </ul>
             </li>
-            <li><a href="#">Personal</a></li>
+            <li><a href="{{ route('sinLimite')}}">Personal</a></li>
           </ul>
           <i class="arrow-main-menu fa fa-angle-right" aria-hidden="true"></i>
         </li>

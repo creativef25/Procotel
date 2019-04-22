@@ -54,6 +54,8 @@ Route::post('busqueda/marca', 'PrincipalController@busquedaMarca')->name('busque
 Route::get('/equipos', 'PrincipalController@equipos')->name('equipos');
 Route::get('/equipos/{id}', 'PrincipalController@detalleEquipo')->name('detalleEquipo');
 Route::get('/promo', 'PrincipalController@promo')->name('promo');
+Route::get('sin_limites', 'PrincipalController@sinlimite')->name('sinLimite');
+Route::get('tarifas-y-opciones', 'PrincipalController@plansinlimite')->name('planSinLimite');
 
 Route::bind('producto', function($id){
   return App\Producto::where('id', $id)->first();

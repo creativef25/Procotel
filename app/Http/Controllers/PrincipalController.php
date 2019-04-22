@@ -154,8 +154,15 @@ class PrincipalController extends Controller
     }
 
     public function promo(){
-
       $imagen = Imagen::where('promocion', 1)->get();
       return view('carrito.promociones', compact('imagen'));
+    }
+
+    public function sinlimite(){
+      return view('carrito.sinlimite');
+    }
+
+    public function plansinlimite(){
+      return view('carrito.sinlimite1');
     }
 }

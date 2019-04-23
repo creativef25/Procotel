@@ -32,7 +32,7 @@
         </li>
 
         <li>
-          <a href="{{-- route('nosotros')--}}">Servicios de valor agregado</a>
+          <a href="{{ route('valorA')}}">Servicios de valor agregado</a>
         </li>
 
         <li>
@@ -247,7 +247,7 @@
             </li>
 
             <li>
-              <a href="{{-- route('nosotros')--}}">Servicios de valor agregado</a>
+              <a href="{{ route('valorA')}}">Servicios de valor agregado</a>
             </li>
 
             <li>
@@ -398,7 +398,7 @@
         </li>
 
         <li class="item-menu-mobile">
-          <a href="{{-- route('nosotros')--}}">Servicios de valor agregado</a>
+          <a href="{{ route('valorA')}}">Servicios de valor agregado</a>
         </li>
 
         <li class="item-menu-mobile">

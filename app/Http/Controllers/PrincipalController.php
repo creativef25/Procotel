@@ -165,4 +165,8 @@ class PrincipalController extends Controller
     public function plansinlimite(){
       return view('carrito.sinlimite1');
     }
+
+    public function valor(){
+      return view('carrito.valor');
+    }
 }

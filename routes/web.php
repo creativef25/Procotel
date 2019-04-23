@@ -56,6 +56,7 @@ Route::get('/equipos/{id}', 'PrincipalController@detalleEquipo')->name('detalleE
 Route::get('/promo', 'PrincipalController@promo')->name('promo');
 Route::get('sin_limites', 'PrincipalController@sinlimite')->name('sinLimite');
 Route::get('tarifas-y-opciones', 'PrincipalController@plansinlimite')->name('planSinLimite');
+Route::get('valor-agregado', 'PrincipalController@valor')->name('valorA');
 
 Route::bind('producto', function($id){
   return App\Producto::where('id', $id)->first();

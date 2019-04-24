@@ -23,10 +23,16 @@
               <form action="{{ route('imagen.store')}}" method="POST" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <div class="row">
-                  <div class="col-md-6">
+                  <div class="col-md-4">
                     <div class=" bmd-form-group">
                       <label class="bmd-label-floating">Selecciones Imagen</label><br>
                       <input type="file" class="form-control" name="path" id="path" value="">
+                    </div>
+                  </div>
+                  <div class="col-md-4" id="nombreImg">
+                    <div class="bmd-form-group">
+                      <label class="bmd-label-floating">Nombre</label><br>
+                      <input type="text" class="form-control" name="nombre" value="">
                     </div>
                   </div>
                   <div class="form-check form-check-radio form-check-inline">
@@ -164,6 +170,7 @@
                       <th>Id</th>
                       <th>Nombre</th>
                       <th>Tipo de imagen</th>
+                      <th>Nombre</th>
                       <th>Imagen</th>
                       <th>Acciónes</th>
                     </tr>
@@ -174,6 +181,7 @@
                         <td>{{$imag->id}}</td>
                         <td>{{$imag->path}}</td>
                         <td>{{empty($imag->id_producto) ? 'Marca' : !empty($imag->promocion) ? 'Promocion' : 'Producto'}}</td>
+                        <td>{{$imag->nombre}}</td>
                         <td>
                           <img src="{{ asset('imagenes/'."$imag->path")}}" width="20%" alt="">
                         </td>

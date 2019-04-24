@@ -22,6 +22,7 @@ class CreateImagensTable extends Migration
             $table->foreign('id_marca')->references('id')->on('marcas')->onDelete('cascade');
             $table->integer('imgPrincipal')->nullable();
             $table->boolean('promocion')->nullable();
+            $table->string('nombre')->nullable();
             $table->timestamps();
         });
     }

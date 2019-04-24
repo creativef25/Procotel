@@ -75,16 +75,19 @@ class ImagenController extends Controller
           $image = Imagen::create([
             'path' => $nombre,
             'id_marca' => $request->id_marca,
+            'nombre' => $request->nombre,
           ]);
         }elseif ($request->inlineRadioOptions == "Producto" && empty($request->imgPrincipal)) {
           $image = Imagen::create([
             'path' => $nombre,
             'id_producto' => $request->id_producto,
+            'nombre' => $request->nombre,
             ]);
         }elseif (!empty($request->promocion)) {
           $image = Imagen::create([
             'path' => $nombre,
             'promocion' => 1,
+            'nombre' => $request->nombre,
             ]);
         }
         else {
@@ -92,6 +95,7 @@ class ImagenController extends Controller
             'path' => $nombre,
             'id_producto' => $request->id_producto,
             'imgPrincipal' => $request->imgPrincipal,
+            'nombre' => $request->nombre,
           ]);
         }
         return redirect()->route('imagen.index')

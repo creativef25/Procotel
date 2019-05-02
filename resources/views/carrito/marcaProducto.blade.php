@@ -24,8 +24,19 @@
 				</div>
 
 				<div class="col-sm-6 col-md-8 col-lg-9 p-b-50">
+          <div class="flex-sb-m flex-m p-b-35">
+            <div class="flex-w">
+              <div class="rs2-select2 of-hidden w-size12 m-t-5 m-b-5 m-r-10">
+                <h3>
+                  @foreach ($marca as $marcan)
+                    {{$marcan->nombre}}
+                  @endforeach
+                </h3>
+              </div>
+            </div>
+          </div>
 					<!-- Product -->
-					<div class="row">
+					<div class="row" id="conte">
             @foreach ($produ as $producto)
 						<div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
 							<!-- Block2 -->
@@ -54,6 +65,7 @@
 						</div>
           @endforeach
 					</div>
+          <div class="holder pagination flex-m flex-w p-t-26"></div>
 				</div>
 			</div>
 		</div>
@@ -102,5 +114,22 @@
   	        skipValues[handle].innerHTML = Math.round(values[handle]) ;
   	    });
   	</script>
+    <script src="{{ asset('carrito/js/jPages.js')}}"></script>
+    <script type="text/javascript">
+
+    $(function(){
+
+      $('div.holder').jPages({
+        containerID: 'conte',
+        perPage: 12,
+        previous: false,
+        next: false
+      });
+
+      $('div.holder a').addClass('item-pagination flex-c-m trans-0-4');
+
+    });
+
+    </script>
   <!--===============================================================================================-->
 @endpush

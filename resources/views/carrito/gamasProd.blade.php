@@ -19,15 +19,41 @@
 							</li>
               @endforeach
 						</ul>
+            <h4 class="m-text14 p-b-7">
+              Marcas
+            </h4>
+            <ul class="p-b-54">
+              @foreach ($marca as $mar)
+              <li class="p-t-4">
+                <span data-id="{{ $mar->id}}"  id="marca" data-gama="{{$gama}}" class="s-text13 active1 marca">{{$mar->nombre}}</span>
+              </li>
+              @endforeach
+            </ul>
 
 					</div>
 				</div>
 
 				<div class="col-sm-6 col-md-8 col-lg-9 p-b-50">
+          <div class="flex-sb-m flex-m p-b-35">
+            <div class="flex-w">
+              <div class="rs2-select2 of-hidden w-size12 m-t-5 m-b-5 m-r-10">
+                <h3>
+                @if ($gama == 1)
+                  <h3>Gama Alta</h3>
+                @elseif ($gama == 2)
+                  <h3>Gama Media</h3>
+
+                @else
+                  <h3>Gama Baja</h3>
+                @endif
+                </h3>
+              </div>
+            </div>
+          </div>
 					<!-- Product -->
-					<div class="row">
+					<div class="row" id="conte">
             @foreach ($produ as $producto)
-						<div class="col-sm-12 col-md-6 col-lg-4 p-b-50">
+						<div class="col-sm-12 col-md-6 col-lg-4 p-b-50 entidades" entidad="{{ $producto->id}}" id="primerDiv{{ $producto->id}}">
 							<!-- Block2 -->
 							<div class="block2">
 								<div class="block2-img wrap-pic-w of-hidden pos-relative">
@@ -53,6 +79,7 @@
 						</div>
           @endforeach
 					</div>
+          <div class="holder pagination flex-m flex-w p-t-26"></div>
 				</div>
 			</div>
 		</div>
@@ -101,5 +128,52 @@
   	        skipValues[handle].innerHTML = Math.round(values[handle]) ;
   	    });
   	</script>
+    <script src="{{ asset('carrito/js/jPages.js')}}"></script>
+    <script type="text/javascript">
+
+    $(function(){
+
+      $('div.holder').jPages({
+        containerID: 'conte',
+        perPage: 12,
+        previous: false,
+        next: false
+      });
+
+      $('div.holder a').addClass('item-pagination flex-c-m trans-0-4');
+
+    });
+
+    </script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript">
+    $(".marca").click(function(){
+      var id = $(this).data('id');
+      $(".entidades").remove();
+      var gama = $(this).data('gama');
+      axios.post('{{route('busquedaMarcaGama')}}',{
+        id:id,
+        gama:gama
+      }).then(function(response){
+        $("#conte").append(response.data);
+        $("#conte").css("min-height", "unset");
+        if ($.browser.device(
+          /android|webos|iphone|ipad|ipod|blackberry|iemobile|operamini/i.test(navigator.userAgent.toLowerCase()))) {
+            scroll();
+        }
+      }).catch(function(error){
+        console.log(error);
+      });
+
+    });
+
+    function scroll(){
+      var posicion = $("#conte").offset().top;
+      $("html, body").animate({
+        scrollTop: posicion
+      }, 2000);
+    }
+
+    </script>
   <!--===============================================================================================-->
 @endpush

@@ -42,6 +42,7 @@
 							<button class="flex-c-m size2 bg1 bo-rad-23 hov1 m-text3 trans-0-4">
 								Enviar
 							</button>
+              <a href="https://api.whatsapp.com/send?phone=5215544551508&text=Hola%20requiero%20informacion" class="flex-c-m size2 bg1 bo-rad-23 hov1 m-text3 trans-0-4" style="margin-top: 10%;">Whatsapp</a>
 						</div>
 					</form>
 				</div>

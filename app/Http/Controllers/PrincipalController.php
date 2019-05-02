@@ -35,15 +35,18 @@ class PrincipalController extends Controller
     }
 
     public function gamaProducto($id){
+      $gama = $id;
       $cate = Categoria::all();
+      $marca = Marca::all();
       $produ = Producto::where('id_gama', $id)->get();
-      return view('carrito.gamasProd', compact('cate', 'produ'));
+      return view('carrito.gamasProd', compact('cate', 'produ', 'marca', 'gama'));
     }
 
     public function marcaProducto($id){
       $cate = Categoria::all();
+      $marca = Marca::where('id', $id)->get();
       $produ = Producto::where('id_marca', $id)->get();
-      return view('carrito.marcaProducto', compact('cate', 'produ'));
+      return view('carrito.marcaProducto', compact('cate', 'produ', 'marca'));
     }
 
     public function detallePedido($id){
@@ -100,6 +103,12 @@ class PrincipalController extends Controller
 
     public function busquedaMarca(Request $request){
       $marca = Producto::where('id_marca', $request->id)->get();
+      return view('carrito.marca', compact('marca'));
+    }
+
+    public function busquedaMarcaGama(Request $request){
+      $marca = Producto::where('id_marca', $request->id)
+                       ->where('id_gama', $request->gama)->get();
       return view('carrito.marca', compact('marca'));
     }
 

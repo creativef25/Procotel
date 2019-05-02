@@ -12,7 +12,7 @@
       <div class="row">
         <div class="col-md-7">
           <h1>Payapp</h1><br>
-          <span>Somos una plataforma de venta de tiempo aire y pago de servicios por medio de WhatsApp, Telegram y SMS, 100% segura y confiable.</span><br><br>
+          <span>Somos una plataforma de venta de tiempo aire y pago de servicios por medio de nuestra Plataforma Web, WhatsApp, Telegram y SMS, 100% segura y confiable.</span><br><br>
           <span >La interfaz ofrece un sistema inteligente y amigable. Te guía paso a paso al realizar cualquier tipo de movimiento que necesites. Realiza una descarga o abonar saldo a tu cuenta.</span>
           <a href="http://payapp.mx/" class="flex-c-m size9 bg4 bo-rad-23 hov1 s-text1 trans-0-4" style="margin-top: 5%;">Ver mas</a>
         </div>

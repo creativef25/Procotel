@@ -51,6 +51,7 @@ Route::get('/detalle/promocion/{id}', 'PrincipalController@detallePromocion')->n
 Route::post('correo/envio', 'PrincipalController@correo')->name('correo');
 Route::post('busqueda/categoria', 'PrincipalController@busquedaCate')->name('busquedaCate');
 Route::post('busqueda/marca', 'PrincipalController@busquedaMarca')->name('busquedaMarca');
+Route::post('marcaGama/', 'PrincipalController@busquedaMarcaGama')->name('busquedaMarcaGama');
 Route::get('/equipos', 'PrincipalController@equipos')->name('equipos');
 Route::get('/equipos/{id}', 'PrincipalController@detalleEquipo')->name('detalleEquipo');
 Route::get('/promo', 'PrincipalController@promo')->name('promo');
